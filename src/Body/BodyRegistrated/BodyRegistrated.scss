@@ -1,0 +1,127 @@
+.body-registrated-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #C5E9FF;
+    height: 850px;
+    align-items: center;
+  
+    .main-logo {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+  
+      img {
+        width: 60%;
+      }
+    }
+  
+    .container-registrated-field{
+      width: 50%;
+      display: flex;
+      justify-content: center;
+  
+  
+      .registrated-field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 80%;
+        height: 600px;
+        background-color: white;
+  
+        .name-registrated {
+          font-size: 3rem;
+        }
+      }
+  
+      .registrated-login {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+  
+        form {
+          display: flex;
+          flex-direction: column;
+  
+          .login-label-text {
+            font-size: 1.5rem;
+            margin-bottom: 2%;
+          }
+  
+          .login-inp {
+            width: 94%;
+            height: 45px;
+            padding-left: 6%;
+            font-size: 25px;
+            border-radius: 5px;
+            opacity: 0.4;
+          }
+        }
+      }
+  
+      .registrated-password {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+  
+        form {
+          display: flex;
+          flex-direction: column;
+  
+          .password-label-text {
+            font-size: 1.5rem;
+            margin-bottom: 2%;
+          }
+  
+          .password-inp {
+            width: 94%;
+            height: 45px;
+            padding-left: 6%;
+            font-size: 25px;
+            border-radius: 5px;
+            opacity: 0.4;
+          }
+
+          .repeat-password-inp {
+            width: 94%;
+            height: 45px;
+            padding-left: 6%;
+            font-size: 25px;
+            border-radius: 5px;
+            opacity: 0.4;
+          }
+        }
+      }
+      .container-button-enter {
+        width: 70%;
+        height: 90px;
+        display: flex;
+        justify-content: flex-end;
+      }
+      .button-enter {
+        border: 1px solid RGB(0, 0, 0, 0.4);
+        width: 45%;
+        height: 45px;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 45px;
+        align-self: flex-end;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+  
+      .container-button-registration {
+        display: flex;
+        width: 70%;
+        justify-content: flex-end;
+  
+        .button-registration {
+          align-self: flex-end;
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
