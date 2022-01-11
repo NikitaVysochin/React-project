@@ -44,6 +44,7 @@
         form {
           display: flex;
           flex-direction: column;
+          width: 100%;
   
           .login-label-text {
             font-size: 1.5rem;
@@ -58,23 +59,21 @@
             border-radius: 5px;
             opacity: 0.4;
           }
-        }
-      }
-  
-      .registrated-password {
-        display: flex;
-        flex-direction: column;
-        width: 70%;
-  
-        form {
-          display: flex;
-          flex-direction: column;
-  
+
+          .password-inp:valid {
+              border-color: green;
+          }
+
+          .password-inp:invalid {
+              color: red;
+          }
+
           .password-label-text {
             font-size: 1.5rem;
             margin-bottom: 2%;
+            margin-top: 2%;
           }
-  
+
           .password-inp {
             width: 94%;
             height: 45px;
@@ -92,36 +91,43 @@
             border-radius: 5px;
             opacity: 0.4;
           }
-        }
-      }
-      .container-button-enter {
-        width: 70%;
-        height: 90px;
-        display: flex;
-        justify-content: flex-end;
-      }
-      .button-enter {
-        border: 1px solid RGB(0, 0, 0, 0.4);
-        width: 45%;
-        height: 45px;
-        border-radius: 5px;
-        text-align: center;
-        line-height: 45px;
-        align-self: flex-end;
-        font-size: 1.5rem;
-        cursor: pointer;
-      }
-  
-      .container-button-registration {
-        display: flex;
-        width: 70%;
-        justify-content: flex-end;
-  
-        .button-registration {
-          align-self: flex-end;
-          font-size: 1.5rem;
-          cursor: pointer;
+
+          .container-button-enter {
+            width: 70%;
+            height: 70px;
+            display: flex;
+            justify-content: flex-end;
+            align-self: flex-end;
+          
+            .button-enter {
+                border: 1px solid RGB(0, 0, 0, 0.4);
+                width: 65%;
+                height: 45px;
+                border-radius: 5px;
+                text-align: center;
+                line-height: 45px;
+                align-self: flex-end;
+                font-size: 1.5rem;
+                cursor: pointer;
+                background-color: rgb(252, 252, 252);
+            }
+          }
+      
+          .container-button-registration {
+            display: flex;
+            width: 70%;
+            justify-content: flex-end;
+            align-self: flex-end;
+      
+            .button-registration {
+              margin-top: 3%;
+              align-self: flex-end;
+              font-size: 1.5rem;
+              cursor: pointer;
+            }
+          }
         }
       }
     }
-  }
+}
+      
