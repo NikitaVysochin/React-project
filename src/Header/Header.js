@@ -1,6 +1,6 @@
-import React from 'react';
-import logoHeader from '../img/Vector (1).png';
-import '../Fonts/Fonts.scss';
+import React from "react";
+import logoHeader from "../img/Vector (1).png";
+import "../Fonts/Fonts.scss";
 import "./Header.scss";
 
 const Header = ({ name }) => {

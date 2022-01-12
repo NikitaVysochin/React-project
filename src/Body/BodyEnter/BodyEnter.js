@@ -1,5 +1,5 @@
-import React from 'react';
-import mainLogo from '../../img/Vector.png';
+import React from "react";
+import mainLogo from "../../img/Vector.png";
 import "./BodyEnter.scss";
 
 const BodyEnter = () => {
