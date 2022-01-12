@@ -21,7 +21,6 @@
       display: flex;
       justify-content: center;
   
-  
       .registrated-field {
         display: flex;
         flex-direction: column;
@@ -35,8 +34,6 @@
           font-size: 3rem;
         }
       }
-  
-      
   
         form {
           display: flex;
@@ -59,10 +56,6 @@
 
           .password-inp:valid {
               border-color: green;
-          }
-
-          .password-inp:invalid {
-              
           }
 
           .password-label-text {
@@ -179,7 +172,7 @@
               cursor: pointer;
               background-color: rgb(252, 252, 252);
           }
-      }
+        }
       }
     }
   }
@@ -196,6 +189,7 @@
       width: 100%;
       display: flex;
       justify-content: center;
+
       .registrated-field
       .name-registrated {
         font-size: 2rem;

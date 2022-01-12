@@ -14,10 +14,10 @@ const BodyEnter = () => {
       login: login,
       password: password,
     }).then(() => { 
-        setOpen({ bool: true, message: 'авторизация прошла успешно', sev: 'success' })
+        setOpen({ bool: true, message: 'авторизация прошла успешно', sev: 'success' });
       }).catch(err => {
         if(err.response.status == 400) {
-          setOpen({bool: true, message: 'такой пользователь уже зарегистрирован', sev: 'error'});
+          setOpen({ bool: true, message: 'такой пользователь уже зарегистрирован', sev: 'error' });
         }
       })
   }
@@ -39,7 +39,7 @@ const BodyEnter = () => {
     const login = formData.get("login");
     
     if (repPass !== password) {
-			setOpen({bool: true, message: 'пароли не совпадают', sev: 'warning'});
+			setOpen({ bool: true, message: 'пароли не совпадают', sev: 'warning' });
     } 
     else {
       Add(login, password);
@@ -60,6 +60,7 @@ const BodyEnter = () => {
                 id="login" 
                 placeholder='Login'
                 autoComplete="off"
+                required
                 name="login"
                 className="login-inp"
                 minLength="6"

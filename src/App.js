@@ -4,9 +4,9 @@ import Header from './Header/Header';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+const App = () => {
   return (<div>
-      <Header name={'Зарегистрироваться в системе'}/>
+      <Header name={ 'Зарегистрироваться в системе' }/>
       <BodyRegistrated/>
     </div>
   );

@@ -3,7 +3,7 @@ import logoHeader from '../img/Vector (1).png';
 import '../Fonts/Fonts.scss';
 import "./Header.scss";
 
-const Header = ({name}) => {
+const Header = ({ name }) => {
 	return (<div className='header-container'>
 		<div className='main-header'>
       <div className='logo-header'><img src={logoHeader}/></div>

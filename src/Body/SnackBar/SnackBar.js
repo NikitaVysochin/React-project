@@ -10,7 +10,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
-export default function SimpleSnackbar({handleClose, open, setOpen}) {
+export default function SimpleSnackbar({ handleClose, open, setOpen }) {
   return (
     <div>
      <Snackbar open={open}
