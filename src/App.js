@@ -1,12 +1,12 @@
+import BodyRegistrated from './Body/BodyRegistrated/BodyRegistrated';
+import BodyEnter from './Body/BodyEnter/BodyEnter';
+import Header from './Header/Header';
 import logo from './logo.svg';
 import './App.css';
-import Header from './Header/Header';
-import BodyEnter from './Body/BodyEnter/BodyEnter';
-import BodyRegistrated from './Body/BodyRegistrated/BodyRegistrated';
 
 function App() {
   return (<div>
-      <Header/>
+      <Header name={'Зарегистрироваться в системе'}/>
       <BodyRegistrated/>
     </div>
   );

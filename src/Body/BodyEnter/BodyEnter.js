@@ -1,6 +1,6 @@
 import React from 'react';
-import "./BodyEnter.scss";
 import mainLogo from '../../img/Vector.png'
+import "./BodyEnter.scss";
 
 const BodyEnter = () => {
 	return (<div className='body-enter-container'>
