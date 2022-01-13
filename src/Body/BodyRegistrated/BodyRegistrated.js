@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import mainLogo from "../../img/Vector.png";
-import SnackBar from "../SnackBar/SnackBar";
-import { Snackbar } from "@mui/material";
-import axios from "axios";
 import "../../BodyRegistrated.scss";
+import SnackBar from "../SnackBar/SnackBar";
+import axios from "axios";
 
 const BodyEnter = () => {
   const regPassword = /^(?=.*\d)[a-zA-Z\d]{6,}$/;
@@ -91,7 +91,7 @@ const BodyEnter = () => {
                 <button className="button-enter">Зарегистрироваться</button>
               </div>
               <div className="container-button-registration">
-                <div className="button-registration">Авторизоваться</div>
+              <Link to='/authorization'><div className="button-registration">Авторизоваться</div></Link>
               </div>
             </form>
         </div>

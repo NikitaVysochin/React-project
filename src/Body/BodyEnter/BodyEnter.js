@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import mainLogo from "../../img/Vector.png";
 import "../../BodyRegistrated.scss";
 import SnackBar from "../SnackBar/SnackBar";
@@ -13,7 +14,6 @@ const BodyEnter = () => {
       login: login,
       password: password,
     }).then(() => { 
-			console.log('mkom')
 				setOpen({ bool: true, message: 'авторизация прошла успешно', sev: 'success' });
       }).catch(err => {
 				if (err.response.status == 400) {
@@ -75,7 +75,7 @@ const BodyEnter = () => {
 								<button className="button-enter">Войти</button>
 							</div>
 							<div className="container-button-registration">
-								<div className="button-registration">Зарегистрироваться</div>
+								<Link to='/bodyRegistrated'><div className="button-registration">Зарегистрироваться</div></Link>	
 							</div>
 						</form>
 				</div>
