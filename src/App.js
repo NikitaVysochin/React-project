@@ -6,8 +6,8 @@ import './App.css';
 
 const App = () => {
   return (<div>
-      <Header name={ 'Зарегистрироваться в системе' } />
-      <BodyRegistrated />
+      <Header name={ 'Войти в систему' } />
+      <BodyEnter />
     </div>
   );
 }
