@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import mainLogo from "../../img/Vector.png";
 import "../../BodyRegistrated.scss";
 import SnackBar from "../SnackBar/SnackBar";
