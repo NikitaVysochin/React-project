@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import mainLogo from "../../img/Vector.png";
-import "../../BodyRegistrated.scss";
 import SnackBar from "../SnackBar/SnackBar";
 import axios from "axios";
+import mainLogo from "../../img/Vector.png";
+import "../../BodyRegistrated.scss";
 
 
 const BodyEnter = () => {
