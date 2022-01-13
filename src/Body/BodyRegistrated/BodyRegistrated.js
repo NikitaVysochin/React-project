@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import mainLogo from "../../img/Vector.png";
+import { Link } from "react-router-dom";
 import SnackBar from "../SnackBar/SnackBar";
-import { Snackbar } from "@mui/material";
 import axios from "axios";
-import "./BodyRegistrated.scss";
+import mainLogo from "../../img/Vector.png";
+import "../../BodyRegistrated.scss";
 
 const BodyEnter = () => {
   const regPassword = /^(?=.*\d)[a-zA-Z\d]{6,}$/;
-  const [open, setOpen] = useState({bool:false, message: '', sev: ''});
+  const [open, setOpen] = useState({ bool:false, message: '', sev: '' });
 
   const Add = async (login, password) => {
     await axios.post('http://localhost:8000/createUser', {
@@ -91,7 +91,7 @@ const BodyEnter = () => {
                 <button className="button-enter">Зарегистрироваться</button>
               </div>
               <div className="container-button-registration">
-                <div className="button-registration">Авторизоваться</div>
+              <Link to='/authorization'><div className="button-registration">Авторизоваться</div></Link>
               </div>
             </form>
         </div>
