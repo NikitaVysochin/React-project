@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import SnackBar from "../SnackBar/SnackBar";
 import axios from "axios";
 import mainLogo from "../../img/Vector.png";
@@ -7,14 +8,17 @@ import "../../BodyRegistrated.scss";
 
 
 const BodyEnter = () => {
-	const [open, setOpen] = useState({ bool:false, message: '', sev: '' });
+	const [open, setOpen] = useState({ bool: false, message: '', sev: '' });
+	const history = useNavigate();
 
 	const Add = async (login, password) => {
     await axios.post('http://localhost:8000/getUser', {
-      login: login,
-      password: password,
-    }).then(() => { 
+      login,
+      password,
+    }).then((res) => { 
+				localStorage.setItem('jwtToken', res.data.data.token);
 				setOpen({ bool: true, message: 'авторизация прошла успешно', sev: 'success' });
+				history("/AddInputs");
       }).catch(err => {
 				if (err.response.status == 400) {
 					setOpen({ bool: true, message: 'пароль неверный', sev: 'error' });
@@ -39,8 +43,7 @@ const BodyEnter = () => {
     if (reason === 'clickaway') {
       return;
     }
-
-    setOpen(open.bool = false);
+    setOpen({...open, bool: false});
   };
 
 	return (
@@ -72,7 +75,7 @@ const BodyEnter = () => {
 							/>
 
 							<div className="container-button-enter">
-								<button className="button-enter">Войти</button>
+							<button className="button-enter">Войти</button>
 							</div>
 							<div className="container-button-registration">
 								<Link to='/bodyRegistrated'><div className="button-registration">Зарегистрироваться</div></Link>	

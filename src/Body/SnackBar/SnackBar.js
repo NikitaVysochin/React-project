@@ -1,4 +1,3 @@
-
 import React, { State, useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
@@ -10,7 +9,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 export default function SimpleSnackbar({ handleClose, open, setOpen }) {
   return (
     <div>
-     <Snackbar open={open}
+     <Snackbar open={open.bool}
       autoHideDuration={6000}
       onClose={handleClose}>
      <Alert severity={open.sev}>{open.message}</Alert>
