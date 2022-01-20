@@ -24,9 +24,9 @@ const InputDoctor = ({ doctor, setDoctor}) => {
           value={doctor}
           onChange={(e)=>handleChange(e)}
         >
-          {arrDoctor.map((elem, index) => {
-            return <MenuItem value={elem} key={index}>{elem}</MenuItem>
-          }) }
+          {arrDoctor.map((elem, index) => 
+            <MenuItem value={elem} key={index}>{elem}</MenuItem>
+          )}
         </Select>
       </FormControl>
     </Box>

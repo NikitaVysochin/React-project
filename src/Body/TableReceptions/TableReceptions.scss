@@ -9,6 +9,9 @@
     margin-top: 2%;
     margin-bottom: 2%;
     min-width: 800px;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
 
     thead {
       tr {
@@ -21,6 +24,7 @@
           background-color: #C4C4C4;
           font-weight: normal;
           font-family: Roboto;
+          padding: 8px;
         }
       }
     }

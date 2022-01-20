@@ -1,7 +1,7 @@
-import { useNavigate, Link } from "react-router-dom";
 import React, { useState } from "react";
-import SnackBar from "../SnackBar/SnackBar";
+import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
+import SnackBar from "../SnackBar/SnackBar";
 import mainLogo from "../../img/Vector.png";
 import "../../BodyRegistrated.scss";
 

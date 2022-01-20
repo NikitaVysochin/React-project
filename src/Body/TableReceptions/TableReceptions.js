@@ -8,60 +8,6 @@ import deleteIcon from "../../img/delete.png";
 import redactIcon from "../../img/redact.png";
 import "./TableReceptions.scss";
 
-const Root = styled("div")`
-  table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-
-  td,
-  th {
-    border: 1px solid #ddd;
-    text-align: left;
-    padding: 8px;
-  }
-
-  th {
-    background-color: #ddd;
-  }
-`;
-
-const CustomTablePagination = styled(TablePaginationUnstyled)`
-  & .MuiTablePaginationUnstyled-toolbar {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-
-    @media (min-width: 768px) {
-      flex-direction: row;
-      align-items: center;
-    }
-  }
-
-  & .MuiTablePaginationUnstyled-selectLabel {
-    margin: 0;
-  }
-
-  & .MuiTablePaginationUnstyled-displayedRows {
-    margin: 0;
-
-    @media (min-width: 768px) {
-      margin-left: auto;
-    }
-  }
-
-  & .MuiTablePaginationUnstyled-spacer {
-    display: none;
-  }
-
-  & .MuiTablePaginationUnstyled-actions {
-    display: flex;
-    gap: 0.25rem;
-  }
-`;
-
 const UnstyledTable = () => {
   const [open, setOpen] = useState(false);
   const [arr, setArr] = useState([]);
@@ -107,14 +53,14 @@ const UnstyledTable = () => {
         setArr={setArr}
         save={save}
       />
-      <Root className='root-table'>
+      <div className='root-table'>
         <div className='container-main-table'>
           <table className="main-table">
             <thead>
               <tr>
-                {thTable.map((elem, index) => {
-                   return <th key={index}>{elem}</th>
-                })}
+                {thTable.map((elem, index) => 
+                  <th key={index}>{elem}</th>
+                )}
               </tr>
             </thead>
             <tbody>
@@ -141,7 +87,7 @@ const UnstyledTable = () => {
             </tbody>
           </table>
         </div>
-      </Root>
+      </div>
     </div>
   );
 }

@@ -5,7 +5,6 @@ import { LocalizationProvider, DatePicker } from '@mui/lab';
 import './InputDate.scss';
 
 const InputDate = ({value, setValue}) => {
-  
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns} >
       <DatePicker className='container-date-text'
