@@ -5,7 +5,7 @@ import ModalBody from './ModalBody/ModalBody';
 import ModalFooter from './ModalFooter/ModalFooter';
 import './Modal.scss'
 
-const BasicModal = ({ open, setOpen, item, setArr, save }) => {
+const BasicModal = ({ open, setOpen, item, setArr, save, delRedact, setDelRedact }) => {
   const handleClose = () => setOpen(false);
 
   return (
@@ -17,12 +17,13 @@ const BasicModal = ({ open, setOpen, item, setArr, save }) => {
         aria-describedby="modal-modal-description"
       >
         <Box className='fck' >
-          <ModalHeader />
+          <ModalHeader delRedact={delRedact}/>
           {save === 0 &&
             <ModalBody 
               item={item} 
               setArr={setArr} 
               setOpen={handleClose} 
+              delRedact={delRedact}
             />
           }
           
