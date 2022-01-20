@@ -21,11 +21,10 @@ const App = () => {
         }/>
         <Route path='/AddInputs' element={
           <>
-          <MainAddInputs />
-          <TableReceptions
-          />
+            <MainAddInputs />
+            <TableReceptions />
           </>
-          
+  
         }/>
         <Route path="/" element={<Navigate replace to="/authorization" />} />
       </Routes>

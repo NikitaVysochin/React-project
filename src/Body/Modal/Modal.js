@@ -1,26 +1,11 @@
 import React, { useState } from "react";
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
+import { Box, Button, Typography, Modal } from '@mui/material';
 import ModalHeader from './ModalHeader/ModalHeader';
 import ModalBody from './ModalBody/ModalBody';
 import ModalFooter from './ModalFooter/ModalFooter';
 import './Modal.scss'
 
-// const style = {
-//   position: 'absolute',
-//   top: '50%',
-//   left: '50%',
-//   transform: 'translate(-50%, -50%)',
-//   width: 400,
-//   bgcolor: 'background.paper',
-//   border: '2px solid #000',
-//   boxShadow: 24,
-//   p: 4,
-// };
-
-export default function BasicModal({ open, setOpen, item, setArr, save }) {
+const BasicModal = ({ open, setOpen, item, setArr, save }) => {
   const handleClose = () => setOpen(false);
 
   return (
@@ -46,3 +31,5 @@ export default function BasicModal({ open, setOpen, item, setArr, save }) {
     </div>
   );
 }
+
+export default BasicModal;

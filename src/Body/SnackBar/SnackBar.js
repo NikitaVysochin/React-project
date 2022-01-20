@@ -7,12 +7,14 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 });
 
 export default function SimpleSnackbar({ handleClose, open, setOpen }) {
+  const {bool, sev, message} = open;
+
   return (
     <div>
-     <Snackbar open={open.bool}
+     <Snackbar open={bool}
       autoHideDuration={6000}
       onClose={handleClose}>
-     <Alert severity={open.sev}>{open.message}</Alert>
+     <Alert severity={sev}>{message}</Alert>
       </Snackbar>
     </div>
   );

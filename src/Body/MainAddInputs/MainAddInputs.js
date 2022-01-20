@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState } from 'react';
+import axios from 'axios';
 import InputDoctor from '../InputDoctor/InputDoctor';
 import InputDate from '../InputDate/InputDate';
 import TableReceptions from '../TableReceptions/TableReceptions';
@@ -12,7 +12,7 @@ const MainAddInputs = () => {
   const [doctor, setDoctor] = useState('');
 
   const checkDisabled = () => {
-    const test = !(nameVal.trim().length > 0 && complaintsVal.trim().length > 0 && dateVal!==null && doctor.length > 0);
+    const test = !(nameVal.trim().length>0 && complaintsVal.trim().length>0 && dateVal!==null && doctor.length>0);
     return test;
   }
 
@@ -26,11 +26,7 @@ const MainAddInputs = () => {
       headers: {
         token: localStorage.getItem('jwtToken')
       }
-    }
-    ).then(res => {
-      console.log(doctor);
-      console.log(typeof(localStorage.getItem('jwtToken')));
-    })
+    });
   }
 
 	return (

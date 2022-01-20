@@ -1,10 +1,10 @@
-import React, { useState } from "react";
 import { useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
 import InputDoctor from '../../InputDoctor/InputDoctor';
-import axios from "axios";
+import axios from 'axios';
 import InputDate from '../../InputDate/InputDate';
-import ModalFooter from "../ModalFooter/ModalFooter";
-import "./ModalBody.scss";
+import ModalFooter from '../ModalFooter/ModalFooter';
+import './ModalBody.scss';
 
 const ModalBody = ({ item, setArr, setOpen }) => {
   const {_id, name, doctor, date, complaint} = item;
@@ -43,14 +43,14 @@ const ModalBody = ({ item, setArr, setOpen }) => {
             onChange={(e) => setNameVal(e.target.value)}/>
           </div>
           <div className='modal-input-doctor'>
-          <label>Врач:</label>
+            <label>Врач:</label>
             <InputDoctor 
             doctor={doctorVal}
             setDoctor={setDoctorVal}
             />
           </div>
           <div className='modal-input-date'>
-          <label>Дата:</label>
+            <label>Дата:</label>
             <InputDate 
             value={dateVal}
             setValue={setdateVal}

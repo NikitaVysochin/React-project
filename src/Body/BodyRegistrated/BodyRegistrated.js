@@ -1,6 +1,5 @@
+import { useNavigate, Link } from "react-router-dom";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 import SnackBar from "../SnackBar/SnackBar";
 import axios from "axios";
 import mainLogo from "../../img/Vector.png";
@@ -91,10 +90,12 @@ const BodyEnter = () => {
 							/>
 
               <div className="container-button-enter">
-              <button className="button-enter">Зарегистрироваться</button>
+                <button className="button-enter">Зарегистрироваться</button>
               </div>
               <div className="container-button-registration">
-              <Link to='/authorization'><div className="button-registration">Авторизоваться</div></Link>
+                <Link to='/authorization'>
+                  <div className="button-registration">Авторизоваться</div>
+                </Link>
               </div>
             </form>
         </div>

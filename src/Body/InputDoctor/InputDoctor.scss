@@ -1,5 +1,6 @@
 .container-inp-mui {
   width: 100%;
+
   .inp-mui {
     width: 100%;
     background-color: white;
@@ -9,7 +10,7 @@
       height: 50px;
     }
 
-    .select-1123 {
+    .select {
       font-size: 1.3rem;
       line-height: 50px;
     }
@@ -19,6 +20,7 @@
 @media screen and (max-width: 1000px) {
   .container-inp-mui {
     width: 100%;
+
     .inp-mui {
       width: 100%;
       background-color: white;

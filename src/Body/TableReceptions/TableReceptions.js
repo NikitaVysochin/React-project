@@ -1,24 +1,12 @@
-import React, { State, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { styled } from "@mui/system";
 import TablePaginationUnstyled from "@mui/base/TablePaginationUnstyled";
 import axios from "axios";
 import moment from "moment";
+import Modal from "../Modal/Modal";
 import deleteIcon from "../../img/delete.png";
 import redactIcon from "../../img/redact.png";
-import Modal from "../Modal/Modal";
 import "./TableReceptions.scss";
-
-function createData(name, calories, fat) {
-  return { name, calories, fat };
-}
-
-const rows = [
-  createData("Cupcake", 305, 3.7),
-  createData("Donut", 452, 25.0),
-  createData("Eclair", 262, 16.0),
-  createData("Frozen yoghurt", 159, 6.0),
-  createData("Gingerbread", 356, 16.0),
-].sort((a, b) => (a.calories < b.calories ? -1 : 1));
 
 const Root = styled("div")`
   table {
@@ -74,7 +62,7 @@ const CustomTablePagination = styled(TablePaginationUnstyled)`
   }
 `;
 
-export default function UnstyledTable() {
+const UnstyledTable = () => {
   const [open, setOpen] = useState(false);
   const [arr, setArr] = useState([]);
   const [index, setIndex] = useState(-1);
@@ -108,12 +96,7 @@ export default function UnstyledTable() {
       });
   };
 
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState();
-
-  // Avoid a layout jump when reaching the last page with empty rows.
-  const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+  const thTable = ['Имя', 'Врач', 'Дата', 'Жалобы', ''];
 
   return (
     <div className="table-container">
@@ -124,23 +107,18 @@ export default function UnstyledTable() {
         setArr={setArr}
         save={save}
       />
-      <Root sx={{ maxWidth: "100%", width: "92%" }}>
+      <Root className='root-table'>
         <div className='container-main-table'>
           <table className="main-table">
             <thead>
               <tr>
-                <th>Имя</th>
-                <th>Врач</th>
-                <th>Дата</th>
-                <th>Жалобы</th>
-                <th></th>
+                {thTable.map((elem, index) => {
+                   return <th key={index}>{elem}</th>
+                })}
               </tr>
             </thead>
             <tbody>
-              {(rowsPerPage > 0
-                ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                : arr
-              ).map((row, index) => (
+              {arr.map((row, index) => (
                 <tr key={row._id}>
                   <td className="td-name">{row.name}</td>
                   <td className="td-doctor">{row.doctor}</td>
@@ -151,8 +129,7 @@ export default function UnstyledTable() {
                   <td className="td-icons">
                     <div className="icons-container">
                       <div onClick={() => Delete(row)}>
-                        {" "}
-                        <img src={deleteIcon} />{" "}
+                        <img src={deleteIcon} />
                       </div>
                       <div onClick={() => redact(index)}>
                         <img src={redactIcon} />
@@ -161,12 +138,6 @@ export default function UnstyledTable() {
                   </td>
                 </tr>
               ))}
-
-              {emptyRows > 0 && (
-                <tr style={{ height: 41 * emptyRows }}>
-                  <td colSpan={3} />
-                </tr>
-              )}
             </tbody>
           </table>
         </div>
@@ -174,3 +145,5 @@ export default function UnstyledTable() {
     </div>
   );
 }
+
+export default UnstyledTable;

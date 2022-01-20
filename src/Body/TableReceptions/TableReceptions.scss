@@ -3,22 +3,17 @@
   height: 100vh;
   display: flex;
   justify-content: center;
-  
-  
 
   .main-table {
     background-color: white;
     margin-top: 2%;
     margin-bottom: 2%;
     min-width: 800px;
-    
-   
 
     thead {
       tr {
         height: 80px;
         
-
         th {
           text-align: center;
           border: 1px solid #C4C4C4;
