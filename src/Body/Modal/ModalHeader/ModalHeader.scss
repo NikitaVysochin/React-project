@@ -1,0 +1,20 @@
+.main-modal-container {
+  height: 110px;
+  width: 100%;
+  display: flex;
+
+  .modal-header-container {
+    border-radius: 4px 4px 0 0;
+    background-color: white;
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 10px 10px -2px rgba(0, 0, 0, 0.5);
+
+    .modal-header-text {
+      font-size: 2.2rem;
+      margin-left: 5%;
+    }
+  }
+}

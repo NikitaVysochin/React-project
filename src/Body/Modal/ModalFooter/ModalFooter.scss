@@ -1,0 +1,49 @@
+.main-shadow-footer-container {
+  height: 98px;
+  display: flex;
+  width: 100%;
+
+  .shadow-footer-container {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px -10px 10px -2px rgba(0, 0, 0, 0.5);
+    border-radius: 0 0 4px 4px;
+  
+    .footer-container {
+      display: flex;
+      justify-content: flex-end;
+      width: 80%;
+      height: 90px;
+  
+      .buttons-container {
+        display: flex;
+        justify-content: flex-end;
+        width: 60%;
+        align-items: center;
+        
+        .footer-cancel {
+          border: 1px solid RGB(0, 0, 0, 0.3);
+          width: 40%;
+          height: 40px;
+          margin-right: 10%;
+          text-align: center;
+          line-height: 40px;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+  
+        .footer-save {
+          border: 1px solid RGB(0, 0, 0, 0.3);
+          width: 40%;
+          height: 40px;
+          text-align: center;
+          line-height: 40px;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,245 @@
+.parent-container {
+  height: 160px;
+  width: 100%;
+  display: flex;
+
+  .mainInputs-container {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: #C5E9FF;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 6px -2px rgba(0, 0, 0, 0.5);
+
+    .mainInputs-form {
+      width: 95%;
+      height: 80px;
+      display: flex;
+      justify-content: space-evenly;
+
+      .main-adaptiv-container {
+        display: flex;
+        width: 100%;
+        height: 200px;
+        justify-content: space-around;
+
+        .adaptiv-container-one {
+          display: flex;
+          width: 46%;
+          justify-content: space-between;
+  
+          .input-name {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1px;
+    
+            label {
+              font-size: 1.3rem;
+              margin-bottom: 2%;
+            }
+    
+            input {
+              width: 18vw;
+              height: 46px;
+              border-radius: 5px;
+              border: 1px solid RGB(0, 0, 0, 0.2);
+              font-size: 1.3rem;
+            }
+          }
+    
+          .input-doctor {
+            display: flex;
+            flex-direction: column;
+            width: 18vw;
+            
+            label {
+              font-size: 1.3rem;
+              margin-bottom: 2%;
+            }
+          }
+        }
+        
+        .adaptiv-container-two {
+          display: flex;
+          width: 47%;
+          justify-content: space-between;
+  
+          .input-date {
+            display: flex;
+            flex-direction: column;
+            width: 48%;
+    
+            label {
+              font-size: 1.3rem;
+              margin-bottom: 2%;
+            }
+          }
+    
+          .input-complaints {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1px;
+    
+            label {
+              font-size: 1.3rem;
+              margin-bottom: 2%;
+            }
+    
+            input {
+              width: 18vw;
+              height: 46px;
+              border-radius: 5px;
+              border: 1px solid RGB(0, 0, 0, 0.2);
+              font-size: 1.3rem;
+            }
+          }
+        }
+
+      }
+
+      
+      
+      
+      .mainInputs-button {
+        margin-bottom: 1px;
+        align-self: flex-end;
+        margin-left: 1%;
+        width: 10%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 1.3rem;
+        background-color: #FFFFFF;
+        border: 1px solid RGB(0, 0, 0, 0.2);
+        border-radius: 3px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .parent-container {
+    height: 290px;
+    width: 100%;
+    display: flex;
+  
+    .mainInputs-container {
+      display: flex;
+      width: 100%;
+      height: 280px;
+      background-color: #C5E9FF;
+      align-items: center;
+      box-shadow: 0px 10px 6px -2px rgba(0, 0, 0, 0.5);
+  
+      .mainInputs-form {
+        width: 100%;
+        height: 280px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .main-adaptiv-container {
+          display: flex;
+          width: 90%;
+          height: 200px;
+          justify-content: space-around;
+
+          .adaptiv-container-one {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            justify-content: space-around;
+    
+            .input-name {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 1px;
+      
+              label {
+                font-size: 1.3rem;
+                margin-bottom: 2%;
+              }
+      
+              input {
+                width: 18vw;
+                height: 40px;
+                width: 90%;
+                border-radius: 5px;
+                border: 1px solid RGB(0, 0, 0, 0.2);
+                font-size: 1.3rem;
+              }
+            }
+      
+            .input-doctor {
+              display: flex;
+              flex-direction: column;
+              width: 92%;
+              
+              label {
+                font-size: 1.3rem;
+                margin-bottom: 2%;
+              }
+            }
+          }
+          
+          .adaptiv-container-two {
+            display: flex;
+            width: 40%;
+            justify-content: space-around;
+            flex-direction: column;
+    
+            .input-date {
+              display: flex;
+              width: 92%;
+              flex-direction: column;
+      
+              label {
+                font-size: 1.2rem;
+                margin-bottom: 2%;
+              }
+            }
+      
+            .input-complaints {
+              display: flex;
+              width: 90%;
+              flex-direction: column;
+              margin-bottom: 1px;
+      
+              label {
+                font-size: 1.2rem;
+                margin-bottom: 2%;
+              }
+      
+              input {
+                width: 90%;
+                height: 40px;
+                border-radius: 5px;
+                border: 1px solid RGB(0, 0, 0, 0.2);
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+
+        .mainInputs-button {
+          margin-bottom: 1px;
+          align-self: center;
+          margin-left: 1%;
+          width: 50%;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          font-size: 1.3rem;
+          background-color: #FFFFFF;
+          border: 1px solid RGB(0, 0, 0, 0.2);
+          border-radius: 3px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  
+}

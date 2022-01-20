@@ -1,5 +1,5 @@
 .header-container {
-  height: 158px;
+  height: 160px;
   width: 100%;
   display: flex;
 
@@ -17,8 +17,21 @@
     }
 
     .name-header {
+      width: 60%;
       font-size: 2.6rem;
       font-family: Roboto;
+    }
+
+    .header-button {
+      width: 12%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 1.6rem;
+      background-color: #FFFFFF;
+      border: 1px solid rgb(146, 146, 146);
+      border-radius: 3px;
+      cursor: pointer;
     }
   }
 }
@@ -32,7 +45,7 @@
     .main-header {
       display: flex;
       width: 100%;
-      height: 150px;
+      height: 120px;
       background-color: #C5E9FF;
       align-items: center;
       box-shadow: 0px 10px 6px -2px rgba(0, 0, 0, 0.5);
@@ -46,20 +59,32 @@
         font-size: 2.1rem;
         font-family: Roboto;
       }
+      .header-button {
+        width: 22%;
+        margin-right: 5%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 1.6rem;
+        background-color: #FFFFFF;
+        border: 1px solid rgb(146, 146, 146);
+        border-radius: 3px;
+        cursor: pointer;
+      }
     }
   }
 }
 
 @media screen and  (max-width: 500px) {
   .header-container {
-    height: 128px;
+    height: 110px;
     width: 100%;
     display: flex;
   
     .main-header {
       display: flex;
       width: 100%;
-      height: 150px;
+      height: 105px;
       background-color: #C5E9FF;
       align-items: center;
       box-shadow: 0px 10px 6px -2px rgba(0, 0, 0, 0.5);
@@ -67,13 +92,30 @@
       .logo-header {
         margin-left: 5%;
         margin-right: 10%;
-        width: 20%;
+        width: 10%;
+
+        img {
+          width: 100%;
+        }
       }
   
       .name-header {
-        width: 80%;
+        width: 50%;
         font-size: 1.5rem;
         font-family: Roboto;
+      }
+
+      .header-button {
+        width: 22%;
+        margin-right: 5%;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 1.6rem;
+        background-color: #FFFFFF;
+        border: 1px solid rgb(146, 146, 146);
+        border-radius: 3px;
+        cursor: pointer;
       }
     }
   }
