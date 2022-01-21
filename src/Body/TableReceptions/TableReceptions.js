@@ -13,10 +13,12 @@ const UnstyledTable = () => {
   const [arr, setArr] = useState([]);
   const [index, setIndex] = useState(-1);
   const [save, setSave] = useState(0);
+  const [delRedact, setDelRedact] = useState(0);
 
   const redact = (index) => {
     setOpen(true);
     setIndex(index);
+    setDelRedact(2);
   };
 
   useEffect(async () => {
@@ -31,15 +33,10 @@ const UnstyledTable = () => {
       });
   }, []);
 
-  const Delete = async (elem) => {
-    await axios
-      .delete(`http://localhost:8000/deleteVisit?_id=${elem._id}`,{
-        headers: {
-          token: localStorage.getItem("jwtToken"),
-        }
-      }).then((res) => {
-        setArr(res.data.data);
-      });
+  const Delete = (index) => {
+    setOpen(true);
+    setIndex(index);
+    setDelRedact(1);
   };
 
   const thTable = ['Имя', 'Врач', 'Дата', 'Жалобы', ''];
@@ -52,6 +49,8 @@ const UnstyledTable = () => {
         item={arr[index]}
         setArr={setArr}
         save={save}
+        delRedact={delRedact}
+        setDelRedact={setDelRedact}
       />
       <div className='root-table'>
         <div className='container-main-table'>
@@ -74,7 +73,7 @@ const UnstyledTable = () => {
                   <td className="td-complaints">{row.complaint}</td>
                   <td className="td-icons">
                     <div className="icons-container">
-                      <div onClick={() => Delete(row)}>
+                      <div onClick={() => Delete(index)}>
                         <img src={deleteIcon} />
                       </div>
                       <div onClick={() => redact(index)}>
