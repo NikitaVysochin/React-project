@@ -45,39 +45,39 @@ const ModalBody = ({ item, setArr, setOpen, delRedact, setDelRedact }) => {
   };
 
 	return (<>
-    {delRedact==2 && <>
-    <div className='modal-body-container'>
-      <div className='modal-mainInputs-container'>
-        <form className='modal-mainInputs-form'>
-          <div className='modal-input-name'>
-            <label>Имя:</label>
-            <input 
-            value={nameVal}
-            onChange={(e) => setNameVal(e.target.value)}/>
-          </div>
-          <div className='modal-input-doctor'>
-            <label>Врач:</label>
-            <InputDoctor 
-            doctor={doctorVal}
-            setDoctor={setDoctorVal}
-            />
-          </div>
-          <div className='modal-input-date'>
-            <label>Дата:</label>
-            <InputDate 
-            value={dateVal}
-            setValue={setdateVal}
-            />
-          </div>
-          <div className='modal-input-complaints'>
-            <label>Жалобы:</label>
-            <input 
-            value={complaintsVal}
-            onChange={(e) => setComplaintseVal(e.target.value)}/>
-          </div>
-        </form>
+    {delRedact == 2 && <>
+      <div className='modal-body-container'>
+        <div className='modal-mainInputs-container'>
+          <form className='modal-mainInputs-form'>
+            <div className='modal-input-name'>
+              <label>Имя:</label>
+              <input 
+              value={nameVal}
+              onChange={(e) => setNameVal(e.target.value)}/>
+            </div>
+            <div className='modal-input-doctor'>
+              <label>Врач:</label>
+              <InputDoctor 
+              doctor={doctorVal}
+              setDoctor={setDoctorVal}
+              />
+            </div>
+            <div className='modal-input-date'>
+              <label>Дата:</label>
+              <InputDate 
+              value={dateVal}
+              setValue={setdateVal}
+              />
+            </div>
+            <div className='modal-input-complaints'>
+              <label>Жалобы:</label>
+              <input 
+              value={complaintsVal}
+              onChange={(e) => setComplaintseVal(e.target.value)}/>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
     <ModalFooter 
       setOpen={setOpen} 
       onSaveButton={saveRedact}
@@ -85,18 +85,18 @@ const ModalBody = ({ item, setArr, setOpen, delRedact, setDelRedact }) => {
       setDelRedact={setDelRedact}
     />
   </>}
-    {delRedact==1 && <>
+    {delRedact == 1 && <>
       <div className='modal-body-container-del'>
         <div className='modal-mainInputs-container-del'>
         Вы действительно хотите удалить прием?
         </div>
       </div>
-    <ModalFooter 
-      setOpen={setOpen}
-      onDeleteButton={deleteVisit}
-      delRedact={delRedact}
-      setDelRedact={setDelRedact}
-    />
+      <ModalFooter 
+        setOpen={setOpen}
+        onDeleteButton={deleteVisit}
+        delRedact={delRedact}
+        setDelRedact={setDelRedact}
+      />
     </>}
   </>);
 }

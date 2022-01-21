@@ -10,16 +10,24 @@ const ModalFooter = ({ setOpen, onSaveButton, onDeleteButton, delRedact, setDelR
         <div className='footer-container'>
           <div className='buttons-container'>
             <div 
-            className='footer-cancel' 
-            onClick={() => setOpen()}
+              className='footer-cancel' 
+              onClick={() => setOpen()}
             >
-            Cancel
+                Cancel
             </div>
-            {delRedact==1 && <>
-              <div className='footer-save' onClick={() => onDeleteButton()}>Delete</div>
+            {delRedact == 1 && <>
+              <div 
+                className='footer-save' 
+                onClick={() => onDeleteButton()}>
+                  Delete
+              </div>
              </>}
-            {delRedact==2 && <>
-              <div className='footer-save' onClick={() => onSaveButton()}>Save</div>
+            {delRedact == 2 && <>
+              <div 
+                className='footer-save' 
+                onClick={() => onSaveButton()}>
+                  Save
+              </div>
              </>}
           </div>
         </div>
