@@ -15,9 +15,9 @@ const Sorting = ({ sorting, setSorting }) => {
     {value: '', label: 'None'},
   ];
   
-    const handleChange = (event) => {
-      setSorting(event.target.value);
-    };
+  const handleChange = (event) => {
+    setSorting(event.target.value);
+  };
   
   return (
     <Box className='sort-container-inp-mui'>

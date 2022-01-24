@@ -24,7 +24,7 @@ const SortAndFilter = ({ arr, setArr }) => {
     setArr([...arr]);
   }
 
-	return (<>
+	return (
     <div className='main-container-sort-filter'>
       <div className='secondary-container-sort-filter'>
         <div className='container-sort-filter'>
@@ -33,7 +33,7 @@ const SortAndFilter = ({ arr, setArr }) => {
             setSorting={sortField}
           />
         </div>
-        {sorting!=='' && <div className='container-sort-filter'>
+        {sorting !== '' && <div className='container-sort-filter'>
           <SortDirection
             direction={direction}
             setDirection={sortDirection}
@@ -41,7 +41,7 @@ const SortAndFilter = ({ arr, setArr }) => {
         </div>}
       </div>
     </div>
-  </>);
+  );
 }
 
 export default SortAndFilter;

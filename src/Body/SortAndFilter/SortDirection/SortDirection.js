@@ -13,9 +13,9 @@ const SortDirection = ({ direction, setDirection }) => {
     {value: 'desc', label: 'По убыванию'} 
   ];
 
-    const handleChange = (event) => {
-      setDirection(event.target.value);
-    };
+  const handleChange = (event) => {
+    setDirection(event.target.value);
+  };
 
   return (
     <Box className='direction-container-inp-mui'>

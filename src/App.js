@@ -28,13 +28,12 @@ const App = () => {
             <SortAndFilter 
               arr={arr}
               setArr={setArr}
-              />
+            />
             <TableReceptions 
               arr={arr}
               setArr={setArr}
             />
           </>
-  
         }/>
         <Route path="/" element={<Navigate replace to="/authorization" />} />
       </Routes>
