@@ -18,9 +18,12 @@ const SortAndFilter = ({ arr, setArr }) => {
   }
 
   const sortArray = (field, dir) => {
+    if (field === '') {
+      field = '_id';
+      dir = 'asc';
+    }
     arr.sort((a, b) => (a[field] < b[field] ? -1 : 1));
     if (dir === 'desc') arr.reverse();
-    if (field === '') arr.sort((a, b) => (a._id < b._id ? -1 : 1));
     setArr([...arr]);
   }
 

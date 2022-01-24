@@ -8,7 +8,8 @@ import './MainAddInputs.scss';
 const MainAddInputs = () => {
   const [nameVal, setNameVal] = useState('');
   const [complaintsVal, setComplaintseVal] = useState('');
-  const [dateVal, setdateVal] = useState(null);
+  const date = new Date();
+  const [dateVal, setdateVal] = useState(date);
   const [doctor, setDoctor] = useState('');
 
   const checkDisabled = () => {
