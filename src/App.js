@@ -3,12 +3,15 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import BodyRegistrated from './Body/BodyRegistrated/BodyRegistrated';
 import BodyEnter from './Body/BodyEnter/BodyEnter';
 import MainAddInputs from './Body/MainAddInputs/MainAddInputs';
-import TableReceptions from './Body/TableReceptions/TableReceptions'
+import SortAndFilter from './Body/SortAndFilter/SortAndFilter'
+import TableReceptions from './Body/TableReceptions/TableReceptions';
 import Header from './Header/Header';
 import logo from './logo.svg';
 import './App.css';
 
 const App = () => {
+
+  const [arr, setArr] = useState([]);
 
   return (<div>
       <Header />
@@ -22,9 +25,15 @@ const App = () => {
         <Route path='/AddInputs' element={
           <>
             <MainAddInputs />
-            <TableReceptions />
+            <SortAndFilter 
+              arr={arr}
+              setArr={setArr}
+            />
+            <TableReceptions 
+              arr={arr}
+              setArr={setArr}
+            />
           </>
-  
         }/>
         <Route path="/" element={<Navigate replace to="/authorization" />} />
       </Routes>

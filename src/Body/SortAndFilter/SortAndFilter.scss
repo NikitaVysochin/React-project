@@ -1,0 +1,22 @@
+.main-container-sort-filter {
+  display: flex;
+  width: 100%;
+  background-color: #C5E9FF;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+
+  .secondary-container-sort-filter {
+    display: flex;
+    justify-content: flex-end;
+    width: 92%;
+    background-color: #C5E9FF;
+
+    .container-sort-filter {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 1%;
+      width: 30%;
+    }
+  }
+}

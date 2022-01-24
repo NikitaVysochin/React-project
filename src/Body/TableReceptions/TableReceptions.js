@@ -8,9 +8,8 @@ import deleteIcon from "../../img/delete.png";
 import redactIcon from "../../img/redact.png";
 import "./TableReceptions.scss";
 
-const UnstyledTable = () => {
+const UnstyledTable = ({ arr, setArr }) => {
   const [open, setOpen] = useState(false);
-  const [arr, setArr] = useState([]);
   const [index, setIndex] = useState(-1);
   const [save, setSave] = useState(0);
   const [delRedact, setDelRedact] = useState(0);
@@ -68,7 +67,7 @@ const UnstyledTable = () => {
                   <td className="td-name">{row.name}</td>
                   <td className="td-doctor">{row.doctor}</td>
                   <td className="td-date">
-                    {moment(row.date).add(10, "days").calendar()}
+                    {moment(row.date).format('L')}
                   </td>
                   <td className="td-complaints">{row.complaint}</td>
                   <td className="td-icons">
