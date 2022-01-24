@@ -1,0 +1,26 @@
+.direction-container-inp-mui {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  .label-direction {
+    width: 250px;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .direction-inp-mui {
+    width: 80%;
+    background-color: white;
+    border-radius: 4px;
+
+    div {
+      height: 50px;
+    }
+
+    .select {
+      font-size: 1.3rem;
+      line-height: 50px;
+    }
+  }
+}
