@@ -14,13 +14,13 @@ const SortAndFilter = ({ arr, setArr, filtArr }) => {
 
   const resultFilterData = () => {
     const resultProductData = arr.filter(a => {
-    const dat = new Date(a.date);
-    if (to == '') return dat >= from;
-    if (from == '') return dat <= to;
-    return (dat >= from && dat <= to);
+      const dat = new Date(a.date);
+      if (to == '') return dat >= from;
+      if (from == '') return dat <= to;
+      return (dat >= from && dat <= to);
     });
 
-    setArr(resultProductData);
+    setArr([...resultProductData]);
   }
   
   const sortField = (value) => {

@@ -12,7 +12,7 @@ const FilterInputs = ({ setArr, from, setFrom, to, setTo, resultFilterData, setF
     setArr([...filtArr]);
   }
 
-  return (<>
+  return (
     <div className='filter-inp-container'>
       <div className='second-filter-inp-container'>
         <div className='date-inp-container'>
@@ -29,13 +29,13 @@ const FilterInputs = ({ setArr, from, setFrom, to, setTo, resultFilterData, setF
             onChangeInput={setTo}  
           />
         </div>
-        <div className='button-filter' onClick={resultFilterData}>Фильтровать</div>
-        <div className='button-delete-filter' onClick={()=>returnFilter()}>
+        <div className='button-filter' onClick={() => resultFilterData()}>Фильтровать</div>
+        <div className='button-delete-filter' onClick={() => returnFilter()}>
           <img src={LogoDelFilter}/>
         </div>
       </div>
     </div>
-  </>);
+  );
 }
 
 export default FilterInputs;
