@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { styled } from "@mui/system";
-import TablePaginationUnstyled from "@mui/base/TablePaginationUnstyled";
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
+import { Table, 
+  TableBody, 
+  TableCell, 
+  TableContainer, 
+  TableHead, 
+  TableRow
+ } from '@mui/material';
 import axios from "axios";
 import moment from "moment";
 import Modal from "../Modal/Modal";
@@ -91,41 +90,6 @@ const UnstyledTable = ({ arr, setArr, setFiltArr }) => {
           </TableBody>
         </Table>
       </TableContainer>
-      {/* <div className='root-table'>
-        <div className='container-main-table'>
-          <table className="main-table">
-            <thead>
-              <tr>
-                {thTable.map((elem, index) => 
-                  <th key={index}>{elem}</th>
-                )}
-              </tr>
-            </thead>
-            <tbody>
-              {arr.map((row, index) => (
-                <tr key={row._id}>
-                  <td className="td-name">{row.name}</td>
-                  <td className="td-doctor">{row.doctor}</td>
-                  <td className="td-date">
-                    {moment(row.date).format('L')}
-                  </td>
-                  <td className="td-complaints">{row.complaint}</td>
-                  <td className="td-icons">
-                    <div className="icons-container">
-                      <div onClick={() => Delete(index)}>
-                        <img src={deleteIcon} />
-                      </div>
-                      <div onClick={() => redact(index)}>
-                        <img src={redactIcon} />
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div> */}
     </div>
   );
 }
