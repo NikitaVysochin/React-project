@@ -8,7 +8,7 @@ import deleteIcon from "../../img/delete.png";
 import redactIcon from "../../img/redact.png";
 import "./TableReceptions.scss";
 
-const UnstyledTable = ({ arr, setArr }) => {
+const UnstyledTable = ({ arr, setArr, setFiltArr }) => {
   const [open, setOpen] = useState(false);
   const [index, setIndex] = useState(-1);
   const [save, setSave] = useState(0);
@@ -29,6 +29,7 @@ const UnstyledTable = ({ arr, setArr }) => {
       })
       .then((res) => {
         setArr(res.data.data);
+        setFiltArr(res.data.data);
       });
   }, []);
 

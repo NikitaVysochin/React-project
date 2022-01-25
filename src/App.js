@@ -12,6 +12,7 @@ import './App.css';
 const App = () => {
 
   const [arr, setArr] = useState([]);
+  const [filtArr, setFiltArr] = useState([]);
 
   return (<div>
       <Header />
@@ -28,10 +29,12 @@ const App = () => {
             <SortAndFilter 
               arr={arr}
               setArr={setArr}
+              filtArr={filtArr}
             />
             <TableReceptions 
               arr={arr}
               setArr={setArr}
+              setFiltArr={setFiltArr}
             />
           </>
         }/>
