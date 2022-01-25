@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { styled } from "@mui/system";
 import TablePaginationUnstyled from "@mui/base/TablePaginationUnstyled";
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
 import axios from "axios";
 import moment from "moment";
 import Modal from "../Modal/Modal";
@@ -52,7 +58,40 @@ const UnstyledTable = ({ arr, setArr, setFiltArr }) => {
         delRedact={delRedact}
         setDelRedact={setDelRedact}
       />
-      <div className='root-table'>
+      <TableContainer className='container-main-table'>
+        <Table stickyHeader className="main-table" aria-label="sticky table">
+          <TableHead>
+            <TableRow>
+              {thTable.map((elem, index) => 
+                <TableCell key={index}>{elem}</TableCell>
+              )}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+           {arr.map((row, index) => (
+                <TableRow key={row._id}>
+                  <TableCell className="td-name">{row.name}</TableCell>
+                  <TableCell className="td-doctor">{row.doctor}</TableCell>
+                  <TableCell className="td-date">
+                    {moment(row.date).format('L')}
+                  </TableCell>
+                  <TableCell className="td-complaints">{row.complaint}</TableCell>
+                  <TableCell className="td-icons">
+                    <div className="icons-container">
+                      <div onClick={() => Delete(index)}>
+                        <img src={deleteIcon} />
+                      </div>
+                      <div onClick={() => redact(index)}>
+                        <img src={redactIcon} />
+                      </div>
+                    </div>
+                  </TableCell>
+                </TableRow>
+              ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+      {/* <div className='root-table'>
         <div className='container-main-table'>
           <table className="main-table">
             <thead>
@@ -86,7 +125,7 @@ const UnstyledTable = ({ arr, setArr, setFiltArr }) => {
             </tbody>
           </table>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

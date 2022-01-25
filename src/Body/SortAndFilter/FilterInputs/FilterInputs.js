@@ -16,14 +16,14 @@ const FilterInputs = ({ setArr, from, setFrom, to, setTo, resultFilterData, setF
     <div className='filter-inp-container'>
       <div className='second-filter-inp-container'>
         <div className='date-inp-container'>
-          <div>с :</div>
+          <div className='date-inp-text'>с :</div>
           <DateFilter 
             date={from}
             onChangeInput={setFrom}
           />
         </div>
         <div className='date-inp-container'>
-          <div>по :</div>
+          <div className='date-inp-text'>по :</div>
           <DateFilter 
             date={to}
             onChangeInput={setTo}  

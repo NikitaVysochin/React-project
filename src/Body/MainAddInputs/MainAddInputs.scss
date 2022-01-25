@@ -97,9 +97,6 @@
         }
 
       }
-
-      
-      
       
       .mainInputs-button {
         margin-bottom: 1px;
@@ -119,7 +116,7 @@
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 500px) and (max-width: 1065px) {
   .parent-container {
     height: 290px;
     width: 100%;
@@ -242,4 +239,135 @@
     }
   }
   
+}
+
+@media screen and (max-width: 500px) {
+  .parent-container {
+    height: 390px;
+    width: 100%;
+    display: flex;
+  
+    .mainInputs-container {
+      display: flex;
+      width: 100%;
+      height: 380px;
+      background-color: #C5E9FF;
+      align-items: center;
+      box-shadow: 0px 10px 6px -2px rgba(0, 0, 0, 0.5);
+  
+      .mainInputs-form {
+        width: 100%;
+        height: 350px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .main-adaptiv-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 90%;
+          height: 350px;
+          justify-content: space-around;
+
+          .adaptiv-container-one {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+    
+            .input-name {
+              width: 92%;
+              display: flex;
+              flex-direction: column;
+              margin-bottom: 2px;
+      
+              label {
+                font-size: 1.1rem;
+                margin-bottom: 2%;
+              }
+      
+              input {
+                height: 36px;
+                width: 98%;
+                border-radius: 5px;
+                border: 1px solid RGB(0, 0, 0, 0.2);
+                font-size: 1.3rem;
+              }
+            }
+      
+            .input-doctor {
+              margin-top: 2%;
+              display: flex;
+              flex-direction: column;
+              width: 92%;
+              
+              label {
+                font-size: 1.1rem;
+                margin-bottom: 2%;
+              }
+            }
+          }
+          
+          .adaptiv-container-two {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
+    
+            .input-date {
+              margin-top: 2%;
+              display: flex;
+              width: 92%;
+              flex-direction: column;
+      
+              label {
+                font-size: 1.1rem;
+                margin-bottom: 2%;
+              }
+            }
+      
+            .input-complaints {
+              margin-top: 3%;
+              display: flex;
+              width: 90%;
+              flex-direction: column;
+              margin-bottom: 1px;
+      
+              label {
+                font-size: 1.1rem;
+                margin-bottom: 2%;
+              }
+      
+              input {
+                width: 100%;
+                height: 40px;
+                border-radius: 5px;
+                border: 1px solid RGB(0, 0, 0, 0.2);
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+
+        .mainInputs-button {
+          margin-top: 2%;
+          margin-bottom: 1px;
+          align-self: center;
+          margin-left: 1%;
+          width: 50%;
+          height: 40px;
+          line-height: 38px;
+          text-align: center;
+          font-size: 1.3rem;
+          background-color: #FFFFFF;
+          border: 1px solid RGB(0, 0, 0, 0.2);
+          border-radius: 3px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
