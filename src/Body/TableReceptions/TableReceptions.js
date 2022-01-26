@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { styled } from "@mui/system";
-import TablePaginationUnstyled from "@mui/base/TablePaginationUnstyled";
+import { Table, 
+  TableBody, 
+  TableCell, 
+  TableContainer, 
+  TableHead, 
+  TableRow
+ } from '@mui/material';
 import axios from "axios";
 import moment from "moment";
 import Modal from "../Modal/Modal";
@@ -52,26 +57,25 @@ const UnstyledTable = ({ arr, setArr, setFiltArr }) => {
         delRedact={delRedact}
         setDelRedact={setDelRedact}
       />
-      <div className='root-table'>
-        <div className='container-main-table'>
-          <table className="main-table">
-            <thead>
-              <tr>
-                {thTable.map((elem, index) => 
-                  <th key={index}>{elem}</th>
-                )}
-              </tr>
-            </thead>
-            <tbody>
-              {arr.map((row, index) => (
-                <tr key={row._id}>
-                  <td className="td-name">{row.name}</td>
-                  <td className="td-doctor">{row.doctor}</td>
-                  <td className="td-date">
+      <TableContainer className='container-main-table'>
+        <Table stickyHeader className="main-table" aria-label="sticky table">
+          <TableHead>
+            <TableRow>
+              {thTable.map((elem, index) => 
+                <TableCell key={index}>{elem}</TableCell>
+              )}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+           {arr.map((row, index) => (
+                <TableRow key={row._id}>
+                  <TableCell className="td-name">{row.name}</TableCell>
+                  <TableCell className="td-doctor">{row.doctor}</TableCell>
+                  <TableCell className="td-date">
                     {moment(row.date).format('L')}
-                  </td>
-                  <td className="td-complaints">{row.complaint}</td>
-                  <td className="td-icons">
+                  </TableCell>
+                  <TableCell className="td-complaints">{row.complaint}</TableCell>
+                  <TableCell className="td-icons">
                     <div className="icons-container">
                       <div onClick={() => Delete(index)}>
                         <img src={deleteIcon} />
@@ -80,13 +84,12 @@ const UnstyledTable = ({ arr, setArr, setFiltArr }) => {
                         <img src={redactIcon} />
                       </div>
                     </div>
-                  </td>
-                </tr>
+                  </TableCell>
+                </TableRow>
               ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
+          </TableBody>
+        </Table>
+      </TableContainer>
     </div>
   );
 }
