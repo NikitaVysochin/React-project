@@ -14,7 +14,8 @@ const BodyEnter = () => {
     await axios.post('http://localhost:8000/createUser', {
       login: login,
       password: password,
-    }).then(() => { 
+    }).then((res) => { 
+        localStorage.setItem('jwtToken', res.data.data.token);
         setOpen({ bool: true, message: 'авторизация прошла успешно', sev: 'success' });
         history("/AddInputs");
       }).catch(err => {
@@ -72,6 +73,7 @@ const BodyEnter = () => {
               <label className="password-label-text">Password:</label>
               <input
                 name="Password"
+                type='password'
                 placeholder='Password'
                 autoComplete="off"
                 pattern="^(?=.*\d)[a-zA-Z\d]{6,25}$"
@@ -83,6 +85,7 @@ const BodyEnter = () => {
 
               <label className="password-label-text">Repeat password:</label>
               <input 
+                type='password'
 								name="Repeat password" 
 								className="repeat-password-inp"
 								autoComplete="off" 

@@ -8,6 +8,11 @@ const Header = () => {
   const history = useNavigate();
   const location = useLocation();
   let headerName = '';
+
+  const exitBack = () => {
+    history("/authorization");
+    localStorage.setItem('jwtToken', '');
+  }
   
   switch (location.pathname) {
     case '/AddInputs':
@@ -26,7 +31,7 @@ const Header = () => {
       <div className='logo-header'><img src={logoHeader}/></div>
       <div className='name-header'>{headerName}</div>
       {location.pathname == '/AddInputs' && 
-        <div className='header-button' onClick={() => history("/authorization")}>
+        <div className='header-button' onClick={() => exitBack()}>
           Выход
         </div>}
     </div>

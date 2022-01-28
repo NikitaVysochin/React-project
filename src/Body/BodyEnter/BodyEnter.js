@@ -66,6 +66,7 @@ const BodyEnter = () => {
 
 							<label className="password-label-text">Password:</label>
 							<input
+								type='password'
 								name="Password"
 								placeholder='Password'
 								autoComplete="off"

@@ -11,7 +11,7 @@ const FilterInputs = ({ setArr, from, setFrom, to, setTo, resultFilterData, setF
     setTo('');
     setArr([...filtArr]);
   }
-
+  
   return (
     <div className='filter-inp-container'>
       <div className='second-filter-inp-container'>

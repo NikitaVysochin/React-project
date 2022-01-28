@@ -8,6 +8,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media screen and (min-width: 1400px) {
+  body {
+    overflow: hidden;
+  }
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -18,3 +24,6 @@ a {
   color: black;
 }
 
+::-webkit-scrollbar {
+  width: 0;
+}
