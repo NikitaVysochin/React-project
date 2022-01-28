@@ -14,7 +14,8 @@ const BodyEnter = () => {
     await axios.post('http://localhost:8000/createUser', {
       login: login,
       password: password,
-    }).then(() => { 
+    }).then((res) => { 
+        localStorage.setItem('jwtToken', res.data.data.token);
         setOpen({ bool: true, message: 'авторизация прошла успешно', sev: 'success' });
         history("/AddInputs");
       }).catch(err => {
