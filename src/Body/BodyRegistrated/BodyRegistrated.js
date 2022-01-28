@@ -72,6 +72,7 @@ const BodyEnter = () => {
               <label className="password-label-text">Password:</label>
               <input
                 name="Password"
+                type='password'
                 placeholder='Password'
                 autoComplete="off"
                 pattern="^(?=.*\d)[a-zA-Z\d]{6,25}$"
@@ -83,6 +84,7 @@ const BodyEnter = () => {
 
               <label className="password-label-text">Repeat password:</label>
               <input 
+                type='password'
 								name="Repeat password" 
 								className="repeat-password-inp"
 								autoComplete="off" 

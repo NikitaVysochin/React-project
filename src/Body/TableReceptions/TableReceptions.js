@@ -72,9 +72,9 @@ const UnstyledTable = ({ arr, setArr, setFiltArr }) => {
                   <TableCell className="td-name">{row.name}</TableCell>
                   <TableCell className="td-doctor">{row.doctor}</TableCell>
                   <TableCell className="td-date">
-                    {moment(row.date).format('L')}
+                    {moment(row.date).format('DD.MM.YYYY')}
                   </TableCell>
-                  <TableCell className="td-complaints">{row.complaint}</TableCell>
+                  <TableCell className="td-complaints"><div>{row.complaint}</div></TableCell>
                   <TableCell className="td-icons">
                     <div className="icons-container">
                       <div onClick={() => Delete(index)}>
@@ -86,7 +86,7 @@ const UnstyledTable = ({ arr, setArr, setFiltArr }) => {
                     </div>
                   </TableCell>
                 </TableRow>
-              ))}
+              ) )}
           </TableBody>
         </Table>
       </TableContainer>

@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-evenly;
     background-color: #C5E9FF;
-    height: 850px;
+    height: 650px;
     align-items: center;
   
     .main-logo {
@@ -143,6 +143,8 @@
 
 @media screen and (min-width: 400px) and (max-width: 1000px) {
   .body-registrated-container {
+    height: 550px;
+
     .main-logo {
       display: none;
     }
@@ -152,9 +154,12 @@
       display: flex;
       justify-content: center;
 
-      .registrated-field
-      .name-registrated {
-        font-size: 2.5rem;
+      .registrated-field {
+        height: 520px;
+      
+        .name-registrated {
+          font-size: 2.5rem;
+        }
       }
     } 
 
@@ -190,8 +195,15 @@
     
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
   .body-registrated-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #C5E9FF;
+    height: 450px;
+    align-items: center;
+
     .main-logo {
       display: none;
     }
@@ -201,22 +213,53 @@
       display: flex;
       justify-content: center;
 
-      .registrated-field
-      .name-registrated {
+      .registrated-field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 80%;
+        height: 400px;
+        background-color: white;
+      
+        .name-registrated {
         font-size: 2rem;
+        }
       }
 
       form {
         .login-label-text {
-          font-size: 1.3rem;
+          font-size: 1.1rem;
           margin-bottom: 2%;
         }
-        .password-label-text{
-          font-size: 1.3rem;
+
+        input {
+          height: 10px;
         }
+
         .password-label-text{
-          font-size: 1.3rem;
+          font-size: 1.1rem;
         }
+
+        .login-inp{
+          height: 30px;
+          font-size: 1.1rem;
+        }
+
+        .password-inp {
+          height: 30px;
+          font-size: 1.1rem;
+        }
+
+        .password-label-text{
+          font-size: 1.1rem;
+        }
+
+        .repeat-password-inp {
+          height: 30px;
+          font-size: 1.1rem;
+        }
+
         .container-button-enter {
           width: 100%;
           height: 70px;
@@ -232,20 +275,18 @@
               text-align: center;
               line-height: 45px;
               align-self: flex-end;
-              font-size: 1.2rem;
+              font-size: 1.1rem;
               cursor: pointer;
               background-color: rgb(252, 252, 252);
           }
         }
         .container-button-registration {
           display: flex;
-          width: 70%;
-          justify-content: flex-end;
-          align-self: flex-end;
+          width: 80%;
+          justify-content: center;
+          align-self: center;
     
-          .button-registration {
-            margin-top: 10%;
-            align-self: flex-end;
+          .button-registration{
             font-size: 1.2rem;
             cursor: pointer;
           }
@@ -254,4 +295,105 @@
     }
   }
     
+}
+
+@media screen and (max-width: 320px) {
+  .body-registrated-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #C5E9FF;
+    height: 450px;
+    align-items: center;
+
+    .main-logo {
+      display: none;
+    }
+
+    .container-registrated-field {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      .registrated-field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 90%;
+        height: 400px;
+        background-color: white;
+      
+        .name-registrated {
+        font-size: 1.3rem;
+        }
+      }
+
+      form {
+        .login-label-text {
+          font-size: 1.1rem;
+          margin-bottom: 2%;
+        }
+
+        input {
+          height: 10px;
+        }
+
+        .password-label-text{
+          font-size: 1.1rem;
+        }
+
+        .login-inp{
+          height: 30px;
+          font-size: 1.1rem;
+        }
+
+        .password-inp {
+          height: 30px;
+          font-size: 1.1rem;
+        }
+
+        .password-label-text{
+          font-size: 1.1rem;
+        }
+
+        .repeat-password-inp {
+          height: 30px;
+          font-size: 1.1rem;
+        }
+
+        .container-button-enter {
+          width: 100%;
+          height: 70px;
+          display: flex;
+          justify-content: flex-end;
+          align-self: flex-end;
+        
+          .button-enter {
+              border: 1px solid RGB(0, 0, 0, 0.4);
+              width: 100%;
+              height: 45px;
+              border-radius: 5px;
+              text-align: center;
+              line-height: 45px;
+              align-self: flex-end;
+              font-size: 1.1rem;
+              cursor: pointer;
+              background-color: rgb(252, 252, 252);
+          }
+        }
+        .container-button-registration {
+          display: flex;
+          width: 80%;
+          justify-content: center;
+          align-self: center;
+    
+          .button-registration{
+            font-size: 1.2rem;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
 }

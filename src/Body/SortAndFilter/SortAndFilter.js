@@ -13,7 +13,7 @@ const SortAndFilter = ({ arr, setArr, filtArr }) => {
   const [to, setTo] = useState('');
 
   const resultFilterData = () => {
-    const resultProductData = arr.filter(a => {
+    const resultProductData = filtArr.filter(a => {
       const dat = new Date(a.date);
       if (to == '') return dat >= from;
       if (from == '') return dat <= to;

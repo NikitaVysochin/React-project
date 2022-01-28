@@ -5,6 +5,7 @@
   justify-content: center;
 
   .container-main-table {
+    width: 95%;
     max-height: 60vh;
 
     .main-table {
@@ -39,6 +40,7 @@
 
             .td-name {
               width: 20%;
+              border-left: 2px solid black;
               border-right: 2px solid black;
               border-bottom: none;
               border-top: none;
@@ -63,10 +65,26 @@
               border-right: 2px solid black;
               border-bottom: none;
               border-top: none;
+
+              div {
+                max-width: 300px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+
+              div:hover {
+                white-space: unset;
+                overflow: unset;
+                text-overflow: unset;
+                overflow-wrap: unset;
+                word-wrap: break-word;
+              }
             }
 
             .td-icons {
               width: 8%;
+              min-width: 60px;
               border-right: 2px solid black;
               border-bottom: none;
               border-top: none;
