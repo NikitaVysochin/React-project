@@ -64,16 +64,7 @@
             margin-top: 2%;
           }
 
-          .password-inp {
-            width: 93%;
-            height: 45px;
-            padding-left: 6%;
-            font-size: 25px;
-            border-radius: 5px;
-            opacity: 0.4;
-          }
-
-          .repeat-password-inp {
+          .password-inp, .repeat-password-inp {
             width: 93%;
             height: 45px;
             padding-left: 6%;
@@ -223,7 +214,7 @@
         background-color: white;
       
         .name-registrated {
-        font-size: 2rem;
+          font-size: 2rem;
         }
       }
 
@@ -237,25 +228,11 @@
           height: 10px;
         }
 
-        .password-label-text{
+        .password-label-text, .password-label-text {
           font-size: 1.1rem;
         }
 
-        .login-inp{
-          height: 30px;
-          font-size: 1.1rem;
-        }
-
-        .password-inp {
-          height: 30px;
-          font-size: 1.1rem;
-        }
-
-        .password-label-text{
-          font-size: 1.1rem;
-        }
-
-        .repeat-password-inp {
+        .login-inp, .password-inp, .repeat-password-inp {
           height: 30px;
           font-size: 1.1rem;
         }
@@ -325,7 +302,7 @@
         background-color: white;
       
         .name-registrated {
-        font-size: 1.3rem;
+          font-size: 1.3rem;
         }
       }
 
@@ -339,25 +316,11 @@
           height: 10px;
         }
 
-        .password-label-text{
+        .password-label-text, .password-label-text {
           font-size: 1.1rem;
         }
 
-        .login-inp{
-          height: 30px;
-          font-size: 1.1rem;
-        }
-
-        .password-inp {
-          height: 30px;
-          font-size: 1.1rem;
-        }
-
-        .password-label-text{
-          font-size: 1.1rem;
-        }
-
-        .repeat-password-inp {
+        .login-inp, .password-inp, .repeat-password-inp {
           height: 30px;
           font-size: 1.1rem;
         }
@@ -388,7 +351,7 @@
           justify-content: center;
           align-self: center;
     
-          .button-registration{
+          .button-registration {
             font-size: 1.2rem;
             cursor: pointer;
           }

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import moment from "moment";
 import InputDoctor from '../InputDoctor/InputDoctor';
 import InputDate from '../InputDate/InputDate';
 import TableReceptions from '../TableReceptions/TableReceptions';

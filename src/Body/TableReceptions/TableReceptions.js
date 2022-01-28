@@ -74,7 +74,9 @@ const UnstyledTable = ({ arr, setArr, setFiltArr }) => {
                   <TableCell className="td-date">
                     {moment(row.date).format('DD.MM.YYYY')}
                   </TableCell>
-                  <TableCell className="td-complaints"><div>{row.complaint}</div></TableCell>
+                  <TableCell className="td-complaints">
+                    <div>{row.complaint}</div>
+                  </TableCell>
                   <TableCell className="td-icons">
                     <div className="icons-container">
                       <div onClick={() => Delete(index)}>
